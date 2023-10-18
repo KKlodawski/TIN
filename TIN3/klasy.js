@@ -1,46 +1,46 @@
-class exampleClass {
-    constructor(exampleVar1, exampleVar2) {
-        this._exampleVar1 = exampleVar1;
-        this._exampleVar2 = exampleVar2;
+class Animal {
+    constructor(age, size) {
+        this._age = age;
+        this._size = size;
     }
-    get exampleVar1() {
-        return this._exampleVar1;
-    }
-
-    set exampleVar1(value) {
-        this._exampleVar1 = value;
+    get age() {
+        return this._age;
     }
 
-    get exampleVar2() {
-        return this._exampleVar2;
+    set age(value) {
+        this._age = value;
     }
 
-    set exampleVar2(value) {
-        this._exampleVar2 = value;
+    get size() {
+        return this._size;
+    }
+
+    set size(value) {
+        this._size = value;
     }
 }
 
-class exampleClass2 extends exampleClass{
-    constructor(exampleVar1, exampleVar2, exampleVar3) {
-        super(exampleVar1, exampleVar2);
-        this._exampleVar3 = exampleVar3;
+class Dog extends Animal{
+    constructor(age, size, breed) {
+        super(age, size);
+        this._breed = breed;
     }
-    get exampleVar3() {
-        return this._exampleVar3;
+    get breed() {
+        return this._breed;
     }
 
-    set exampleVar3(value) {
-        this._exampleVar3 = value;
+    set breed(value) {
+        this._breed = value;
     }
 }
 
 // ================================================
 console.log("Classes:");
-x = new exampleClass(1,2);
-x2 = new exampleClass2(1,2,3);
-console.log(`${x.exampleVar1}, ${x.exampleVar2}`);
-console.log(`${x2.exampleVar1}, ${x2.exampleVar2}, ${x2.exampleVar3}`);
-x2.exampleVar3 = 5;
-x2.exampleVar2 = 6;
-x2.exampleVar1 = 7;
-console.log(`${x2.exampleVar1}, ${x2.exampleVar2}, ${x2.exampleVar3}`);
+x = new Animal(1,2);
+x2 = new Dog(1,2,"abc");
+console.log(`x1 : ${x.age}, ${x.size}`);
+console.log(`x2 : ${x2.age}, ${x2.size}, ${x2.breed}`);
+x2.breed = 5;
+x2.size = 6;
+x2.age = "abced";
+console.log(`x2 after change : ${x2.age}, ${x2.size}, ${x2.breed}`);

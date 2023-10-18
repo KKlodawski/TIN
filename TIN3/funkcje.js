@@ -5,8 +5,7 @@ function fibbonacci(n) {
     let result = [0,1];
 
     for (let i = 2; i <= n; i++) {
-        let tmp = result[1];
-        result = [tmp, result[0] + result[1]];
+        result = [result[1], result[0] + result[1]];
     }
     return result[1];
 }
@@ -18,7 +17,8 @@ function isPalindrome(str) {
 }
 
 function variableType(variable) {
-    return typeof variable;
+    if (variable instanceof Array) return Array.name;
+    else return typeof variable;
 }
 
 function amountToCoins(amount, coins) {
@@ -55,6 +55,7 @@ console.log(`${x2} : ${variableType(x2)}`);
 console.log(`${x3} : ${variableType(x3)}`);
 console.log(`${x4} : ${variableType(x4)}`);
 console.log(`${x5} : ${variableType(x5)}`);
+console.log(`${variableType({})}`)
 
 console.log("Convert coins:")
 console.log(`Amount: 46 Coins: 10,5,1 ::: ${amountToCoins(46,[10,5,1])}`);
