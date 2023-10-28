@@ -1,4 +1,4 @@
-#nameError, #emailError {
+#ErrorMessage {
     color: red;
     margin-left: 5px;
 }

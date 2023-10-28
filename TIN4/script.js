@@ -1,57 +1,31 @@
-/*
-todo
-change functions to validate every argument like length, regex etc. not whole element
-and change error logic
-*/
 function validate() {
     let name = document.forms["form"]["name"];
     let email = document.forms["form"]["email"];
-    //if(!nameValidation(name) || !emailValidation(email)) return false;
-    //return true;
 
-    let errors="";
-    errors += `${validateLength(2,60,name)} ${validateSpaceOnly(name)} ` + validateRegex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",email)
-    console.log(errors);
-    if(errors.trim() === "") return true;
-    else return false;
-}
+    let errors = [
+        validateLength(2,60,name),
+        validateSpaceOnly(name),
+        validateSpaceOnly(email),
+        validateRegex('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$',email)
+    ];
+    errors = errors.filter(e => e !== "");
+    let errorElement = document.getElementById("ErrorMessage");
 
-
-function nameValidation(name) {
-    console.log(name.value.length);
-    const errorExists = document.getElementById("nameError");
-    if (name.value.length >= 2 && name.value.length <= 60 && name.value.trim() !== "") {
-        if(errorExists != null) errorExists.remove();
+    if(errors.length === 0) {
+        if(errorElement) errorElement.remove();
         return true;
     }
     else {
-        if(errorExists == null) {
-            let errorPara = document.createElement("label");
-            errorPara.textContent = "Name must be in range 2..60 and cannot contain only white spaces";
-            errorPara.setAttribute('for', 'name');
-            errorPara.id = "nameError";
-            name.insertAdjacentElement("afterend", errorPara);
+        if(!errorElement){
+            let marker = document.getElementById("formsubmit");
+            let errorElement = document.createElement("p");
+            errorElement.innerHTML = errors.join("<br>");
+            errorElement.id = "ErrorMessage";
+            marker.insertAdjacentElement("afterend",errorElement);
+        } else {
+            errorElement.innerHTML = errors.join("<br>");
         }
-        return false;
-    }
-}
 
-function emailValidation(email) {
-    const regex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
-    const errorExists = document.getElementById("emailError");
-    console.log(email.value + " " + email.value.match(regex));
-    if(email.value.match(regex) != null) {
-        if(errorExists != null) errorExists.remove();
-        return true;
-    }
-    else {
-        if(errorExists == null) {
-            let errorPara = document.createElement("label");
-            errorPara.textContent = "Email format is invalid!";
-            errorPara.setAttribute('for', 'email');
-            errorPara.id = "emailError";
-            email.insertAdjacentElement("afterend", errorPara);
-        }
         return false;
     }
 }
