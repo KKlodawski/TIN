@@ -23,10 +23,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.post('/show',function(req,res,next) {
 
-  res.locals.msg = "abc";
+  const parameter = req.body.data;
 
   res.status(200);
-  res.render('show');
+  res.render('show', {title: "TIN6 response", result: parameter});
 
 });
 
