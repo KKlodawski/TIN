@@ -1,0 +1,27 @@
+<!DOCTYLE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/list.css' />
+    <title><%= title %></title>
+</head>
+<body>
+    <table>
+        <tr>
+            <% userAttributes.forEach( (attribute, index) => { %>
+                <% if ( index < userAttributes.length - 2) {%>
+                <th> <%= attribute %> </th>
+            <% }}); %>
+        </tr>
+
+        <tr>
+            <% userAttributes.forEach( (attr,index) => { %>
+                <% if ( index < userAttributes.length - 2) {%>
+                <td> <%= detailedUser.get(`${attr}`) %> </td>
+            <% }}); %>
+        </tr>
+    </table>
+    <form action="/list">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>
