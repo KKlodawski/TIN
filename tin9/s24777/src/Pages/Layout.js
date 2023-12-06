@@ -1,15 +1,19 @@
-import {Link} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 
 function Layout() {
     return (
-      <nav>
-          <ul>
-              <li>
-                  <Link to="/">Home</Link>
-              </li>
-          </ul>
-      </nav>
+    <>
+        <nav>
+            <ul>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+            </ul>
+        </nav>
+
+        <Outlet />
+    </>
     );
 }
 
