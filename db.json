@@ -4,9 +4,11 @@
       "id": 1,
       "Brand": "iPhone",
       "Model": "16 Pro"
+    },
+    {
+      "id": 2,
+      "Brand": "Samsung",
+      "Model": "Galaxy S23"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
