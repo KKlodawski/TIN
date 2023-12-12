@@ -3,12 +3,52 @@
     {
       "id": 1,
       "Brand": "iPhone",
-      "Model": "16 Pro"
+      "Model": "15 Pro"
+      "Storage": "128",
+      "Resolution": "1179x2556",
+      "Refresh": "120",
+      "Cloak": "3.78",
+      "RAM": "8"
     },
     {
       "id": 2,
       "Brand": "Samsung",
       "Model": "Galaxy S23"
+      "Storage": "128",
+      "Resolution": "1080x2400",
+      "Refresh": "120",
+      "Cloak": "3.2",
+      "RAM": "8"
+    },
+    {
+      "id": 3,
+      "Brand": "Motorola",
+      "Model": "Edge 30 Neo"
+      "Storage": "128",
+      "Resolution": "1080x2400",
+      "Refresh": "120",
+      "Cloak": "2.2",
+      "RAM": "8"
+    },
+    {
+      "id": 4,
+      "Brand": "Xiaomi",
+      "Model": "Redmi A2"
+      "Storage": "64",
+      "Resolution": "720x1600",
+      "Refresh": "60",
+      "Cloak": "2.2",
+      "RAM": "3"
+    },
+    {
+      "id": 5,
+      "Brand": "Oppo",
+      "Model": "Reno8"
+      "Storage": "128",
+      "Resolution": "1080x2400",
+      "Refresh": "90",
+      "Cloak": "2.2",
+      "RAM": "8"
     }
   ],
   "profile": {
