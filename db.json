@@ -10,5 +10,8 @@
       "Brand": "Samsung",
       "Model": "Galaxy S23"
     }
-  ]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
