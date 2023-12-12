@@ -1,0 +1,21 @@
+.Phone {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table, tr, td, th {
+    border: solid #bc4749 1px;
+    border-collapse: collapse;
+}
+.Phone a {
+    position: fixed;
+    bottom: 60px;
+    text-decoration: none;
+    color: #bc4749;
+    font-size: 30px;
+}
+.Phone a:hover {
+    color: black;
+}

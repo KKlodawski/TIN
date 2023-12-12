@@ -1,0 +1,21 @@
+.PhoneList {
+    padding-top: 50px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+table, tr, td, th {
+    padding: 5px;
+    font-size: 50px;
+}
+
+.navButton {
+    text-decoration: none;
+    color: #bc4749;
+}
+
+.navButton:hover {
+    color: black;
+}

@@ -1,11 +1,8 @@
 .Navbar{
     padding: 15px 10px;
-    height: 100%;
-    width: 10%;
+    height: calc(100% - 30px);
+    width: auto;
     background-color: #6a994e;
-    position: fixed;
-    top: 0;
-    left: 0;
     border-right: solid black 3px;
     border-radius: 2px;
 }
@@ -22,9 +19,12 @@
     color: #bc4749;
     border: solid #bc4749 2px;
     margin: 2px 0;
+    padding: 0px 1px;
 }
 
 .Navbar .navButton:hover {
     background-color: #6a994e;
     color: #bc4749;
 }
+
+

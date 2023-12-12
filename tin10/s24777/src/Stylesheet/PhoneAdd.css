@@ -1,0 +1,33 @@
+
+.phoneAdd {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.phoneAdd input {
+    background-color: #6a994e;
+    font-size: 40px;
+    color: #bc4749;
+}
+.phoneAdd input::placeholder {
+    color: #bc4749;
+}
+
+.phoneAdd form {
+    background-color: #6a994e;
+    border: solid #bc4749 2px;
+    padding: 5px;
+}
+.phoneAdd button {
+    font-size: 40px;
+    background-color: #386641;
+    opacity: 80%;
+    border-radius: 20px;
+    color: #bc4749;
+    border: solid #bc4749 2px;
+    margin: 5px;
+    padding: 2px 4px;
+}
